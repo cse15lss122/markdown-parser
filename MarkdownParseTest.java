@@ -8,7 +8,7 @@ public class MarkdownParseTest {
         assertEquals(2, 1 + 1);
     }
     @Test
-    public void checkLinks(){
+    public void checkLinks() throws IOException{
         MarkdownParse p = new MarkdownParse();
         ArrayList<String> check = new ArrayList<>();
         check.add("https://something.com");
