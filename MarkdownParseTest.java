@@ -11,8 +11,10 @@ public class MarkdownParseTest {
     public void checkLinks(){
         MarkdownParse p = new MarkdownParse();
         ArrayList<String> check = new ArrayList<>();
-        check.add("https://something.com,some-thing.html");
-       //check.add("some-thing.html");
-        assertEquals(check,p.getLinks());
+        check.add("https://something.com");
+        check.add("some-thing.html");
+        Path filename=Path.of("test-file.md");
+        String cont=Files.readString(fileName);
+        assertEquals(check,p.getLinks(filename));
     }
 }
