@@ -19,6 +19,6 @@ public class MarkdownParseTest {
         check.add("some-thing.html");
         Path filename=Path.of("test-file.md");
         String cont=Files.readString(fileName);
-        assertEquals(check,p.getLinks(filename));
+        assertEquals(check,p.getLinks(cont));
     }
 }
