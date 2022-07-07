@@ -6,5 +6,9 @@ public class MarkdownParseTest {
     public void addition() {
         assertEquals(2, 1 + 1);
     }
-
+    @Test
+    public void checkLinks(){
+        MarkdownParse p = new MarkdownParse("test-file.md");
+        assertEquals(["https://something.com,some-thing.html"],p.getLinks());
+    }
 }
