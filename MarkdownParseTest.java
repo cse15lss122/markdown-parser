@@ -14,6 +14,7 @@ public class MarkdownParseTest {
     @Test
     public void checkLinks() throws IOException{
         MarkdownParse p = new MarkdownParse();
+        System.out.println("Ooga booga");
         ArrayList<String> check = new ArrayList<>();
         check.add("https://something.com");
         check.add("some-thing.html");
