@@ -7,4 +7,6 @@ MarkdownParse.class: MarkdownParse.java
 	javac -g -cp $(CLASSPATH) MarkdownParse.java
 
 test: MarkdownParseTest.class
-	java -cp $(CLASSPATH) org.junit.runner.JUnitCore MarkdownParseTest 
+	java -cp $(CLASSPATH) org.junit.runner.JUnitCore MarkdownParseTest
+	java MarkdownParse.java
+	java MarkdownParseTest.java 
