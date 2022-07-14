@@ -28,8 +28,19 @@ public class MarkdownParseTest {
         Path fileName = Path.of("test-file2.md");
         String content = Files.readString(fileName);
         ArrayList<String> expected=new ArrayList<String>();
-        expected.add("https://something.com");
+        expected.add("https://google.com");
         expected.add("some-thing.html");
+        expected.add("https://google.com");
+
+        assertEquals(MarkdownParse.getLinks(content), expected);
+    }
+
+    @Test
+    public void newTest3() throws IOException {
+        Path fileName = Path.of("test-file3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> expected=new ArrayList<String>();
+        expected.add("more text here");
         assertEquals(MarkdownParse.getLinks(content), expected);
     }
 
