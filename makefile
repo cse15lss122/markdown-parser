@@ -7,4 +7,4 @@ MarkdownParse.class: MarkdownParse.java
 	/software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -g  MarkdownParse.java
 
 test: MarkdownParseTest.class
-	java -cp $(CLASSPATH) org.junit.runner.JUnitCore MarkdownParseTest
+	/software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp $(CLASSPATH) org.junit.runner.JUnitCore MarkdownParseTest
