@@ -8,5 +8,3 @@ MarkdownParse.class: MarkdownParse.java
 
 test: MarkdownParseTest.class
 	java -cp $(CLASSPATH) org.junit.runner.JUnitCore MarkdownParseTest
-	java MarkdownParse.java
-	java MarkdownParseTest.java 
