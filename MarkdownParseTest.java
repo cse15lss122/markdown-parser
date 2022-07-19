@@ -39,4 +39,34 @@ public class MarkdownParseTest {
         assertEquals(true, MarkdownParse.getLinks(content).isEmpty());
     }
 
+    //New Test
+    @Test
+    public void getCorrectLinks4() throws IOException{
+        String content = Files.readString(Path.of("test-file4.md"));
+        assertEquals(List.of(""),MarkdownParse.getLinks(content));
+    }
+
+     //New Test
+    @Test
+    public void getCorrectLinks5() throws IOException{
+        String content = Files.readString(Path.of("test-file5.md"));
+        assertEquals(List.of("page.com"),MarkdownParse.getLinks(content));
+    }
+
+    //New Test
+    @Test
+    public void getCorrectLinks6() throws IOException{
+        String content = Files.readString(Path.of("test-file6.md"));
+        assertEquals(List.of(""),MarkdownParse.getLinks(content));
+    }
+
+    //New Test
+    @Test
+    public void getCorrectLinks8() throws IOException{
+        String content = Files.readString(Path.of("test-file8.md"));
+        assertEquals(List.of("a link on the first line"),MarkdownParse.getLinks(content));
+    }
+
+   
+
 }
