@@ -11,11 +11,8 @@ public class MarkdownParse {
         ArrayList<String> toReturn = new ArrayList<>();
         // find the next [, then find the ], then find the (, then read link upto next )
         int currentIndex = 0;
-        while(currentIndex < markdown.length()) {
-            int openBracket = markdown.indexOf("[", currentIndex);
-            if(openBracket == -1){
-                break;
-            }
+        while(currentIndex < markdown.length()||openBracket!=null||closeBracket!=null||openParen!=null||closeParen!=null) {
+            int openBracket = MarkdownParse.checkOpenBracket(markdown, currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             if(openBracket == -1 || closeBracket == -1){
@@ -34,6 +31,13 @@ public class MarkdownParse {
         return toReturn;
     }
 
+    public static int checkOpenBracket(String markdown, int currentIndex){
+        int openBracket = markdown.indexOf("[", currentIndex);
+            if(openBracket == -1){
+                return null;
+            }
+        return openBracket;
+    }
 
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of(args[0]);
